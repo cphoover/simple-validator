@@ -50,6 +50,16 @@ describe('AWSElasticSearchMixin', function suite() {
 		});
 
 		_assert2.default.doesNotThrow(function () {
+			var a = { 'c': 0 };
+			_3.default.required(a, 'c', _lodash2.default.isInteger);
+		});
+
+		_assert2.default.throws(function () {
+			var a = { 'c': 0 };
+			_3.default.optional(a, 'c', _lodash2.default.isString);
+		});
+
+		_assert2.default.doesNotThrow(function () {
 			var a = { 'c': 'asdf' };
 			_3.default.required(a, 'c', _lodash2.default.isString);
 		});

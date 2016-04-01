@@ -29,7 +29,7 @@ var ValidationError = function (_Error) {
 
 var api = {
 	optional: function optional(_repo, field, _validator) {
-		if (_repo[field] && !_validator(_repo[field])) {
+		if (_repo[field] !== undefined && !_validator(_repo[field])) {
 			throw new ValidationError('optional field ' + field + ' must be valid');
 		}
 	},
