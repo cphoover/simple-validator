@@ -14,8 +14,6 @@ var _lodash2 = _interopRequireDefault(_lodash);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-console.log('asdf', _lodash2.default.isInteger);
-
 describe('AWSElasticSearchMixin', function suite() {
 	it('ValidationError has a default message', function () {
 		var ValidationError = _3.default.ValidationError;

@@ -29,9 +29,6 @@ var ValidationError = function (_Error) {
 
 var api = {
 	optional: function optional(_repo, field, _validator) {
-		console.log('_repo', _repo);
-		console.log('field', field);
-		console.log('_validator', _validator);
 		if (_repo[field] && !_validator(_repo[field])) {
 			throw new ValidationError('optional field ' + field + ' must be valid');
 		}
