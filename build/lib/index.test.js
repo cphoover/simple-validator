@@ -24,6 +24,17 @@ describe('AWSElasticSearchMixin', function suite() {
 		}
 	});
 
+	it('ValidationError is an instanceof ValidationError and an instanceof Error', function () {
+		var ValidationError = _3.default.ValidationError;
+		try {
+			throw new ValidationError();
+		} catch (e) {
+			console.log(e.constructor.name);
+			(0, _assert2.default)(e instanceof ValidationError, 'e instanceof validate.ValidationError');
+			(0, _assert2.default)(e instanceof Error, 'e instanceof Error');
+		}
+	});
+
 	it('can validate some things', function () {
 		_assert2.default.doesNotThrow(function () {
 			var a = { b: 1 };
